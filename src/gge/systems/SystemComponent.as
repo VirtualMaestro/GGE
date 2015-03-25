@@ -8,14 +8,62 @@ package gge.systems
 	/**
 	 * Special king of component for implementation game logic.
 	 */
-	public class SystemComponent extends GComponent
+	public class SystemComponent extends GComponent implements ISystem
 	{
 		public function SystemComponent()
 		{
 			super();
 		}
 
-		public function getSystem():SystemComponent
+		/**
+		 *
+		 */
+		override public function init():void
+		{
+
+		}
+
+		/**
+		 */
+		public function getSystem(p_systemClass:Class):ISystem
+		{
+			return null;
+		}
+
+		/**
+		 */
+		public function isSystemExist(p_systemClass:Class):Boolean
+		{
+			return false;
+		}
+
+		/**
+		 */
+		public function addListener(p_eventName:String, p_handler:Function, p_specifiedSystem:Class = null):void
+		{
+		}
+
+		/**
+		 */
+		public function removeListener(p_eventName:String):void
+		{
+		}
+
+		/**
+		 */
+		public function removeAllListeners():void
+		{
+		}
+
+		/**
+		 */
+		public function dispatch(p_eventName:String, p_params:Object = null):void
+		{
+		}
+
+		/**
+		 */
+		override public function dispose():void
 		{
 
 		}

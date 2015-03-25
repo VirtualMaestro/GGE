@@ -13,6 +13,11 @@ package gge.systems
 		function getSystem(p_systemClass:Class):ISystem;
 
 		/**
+		 * Check if specified system exist and ready to use by given its class.
+		 */
+		function isSystemExist(p_systemClass:Class):Boolean;
+
+		/**
 		 * Subscribes system for listening event from another systems.
 		 * There is possible listen to a specified system.
 		 */
@@ -21,7 +26,7 @@ package gge.systems
 		/**
 		 * Removes specified subscription.
 		 */
-		function removeListener(p_eventName:String, p_handler:Function):void;
+		function removeListener(p_eventName:String):void;
 
 		/**
 		 * Removes all subscription of current system.
@@ -29,8 +34,13 @@ package gge.systems
 		function removeAllListeners():void;
 
 		/**
-		 *
+		 * Dispatches events. There is possible to add some params.
 		 */
-		function dispatch(p_event:SystemEvent):void;
+		function dispatch(p_eventName:String, p_params:Object = null):void;
+
+		/**
+		 * Destroys system.
+		 */
+		function dispose():void;
 	}
 }
