@@ -1,2 +1,1 @@
-# GGE
-Genome game engine - wrapper over the genome2d framework.
+GGE - different extension which help to create games with Genome2d engine.
