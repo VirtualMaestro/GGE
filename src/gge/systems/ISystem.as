@@ -39,6 +39,11 @@ package gge.systems
 		function dispatch(p_eventName:String, p_params:Object = null):void;
 
 		/**
+		 * Returns class of system.
+		 */
+		function getClass():Class;
+
+		/**
 		 * Destroys system.
 		 */
 		function dispose():void;

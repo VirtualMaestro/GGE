@@ -3,13 +3,21 @@
  */
 package gge.systems
 {
+	import avmplus.getQualifiedClassName;
+
 	import com.genome2d.components.GComponent;
+
+	import flash.utils.getDefinitionByName;
 
 	/**
 	 * Special king of component for implementation game logic.
 	 */
 	public class SystemComponent extends GComponent implements ISystem
 	{
+		private var _class:Class;
+
+		/**
+		 */
 		public function SystemComponent()
 		{
 			super();
@@ -66,6 +74,14 @@ package gge.systems
 		override public function dispose():void
 		{
 
+		}
+
+		/**
+		 */
+		public function getClass():Class
+		{
+			if (_class == null) _class = getDefinitionByName(getQualifiedClassName(this)) as Class;
+			return _class;
 		}
 	}
 }

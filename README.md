@@ -1,1 +1,1 @@
-GGE - different extension which help to create games with Genome2d engine.
+GGE - different extensions which help to create games with Genome2d engine.
